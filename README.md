@@ -37,11 +37,11 @@ Open index.html in a browser. No build step, no server.
 
 | ID | Requirement | Where (permalink) | How to check |
 | --- | --- | --- | --- |
-| S1-R1 | README: description, fields, sample data, how to run | [README.md](<link-aici>) | read |
-| S1-R2 | AI usage section | [README.md](<link-aici>) | read |
-| S1-R3 | AI log for stage 1 | [ai-log/etapa-01.md](<link-aici>) | read |
-| S1-R4 | header, form (text + select), 3 cards with own data | [index.html](<https://github.com/Bote20/JobTracker/blob/aeb40072a618f654106921571830940ed8c10461/index.html#L1-L65>) | open the page |
-| S1-R5 | finished card looks different | [style.css - .done](<link-aici>) | look at the card |
-| S1-R6 | 2 columns on desktop, 1 under 700px | [style.css - @media](<link-aici>) | resize < 700px |
-| S1-R7 | visible focus, readable dark theme | [style.css - focus/dark](<link-aici>) | Tab; dark mode |
-| S1-R8 | commit "Stage 1" pushed | [Commit "Stage 1"](<link-aici>) | commit history |
+| S1-R1 | README: description, fields, sample data, how to run | [README.md](https://github.com/Bote20/JobTracker/blob/f6d07f6da15b3d01396dc11dd95b99a6824e09d0/README.md?plain=1#L1-L30) | read |
+| S1-R2 | AI usage section | [README.md](https://github.com/Bote20/JobTracker/blob/f6d07f6da15b3d01396dc11dd95b99a6824e09d0/README.md?plain=1#L20-L27) | read |
+| S1-R3 | AI log for stage 1 | [ai-log/etapa-01.md](https://github.com/Bote20/JobTracker/blob/f6d07f6da15b3d01396dc11dd95b99a6824e09d0/ai-log/etapa01.md?plain=1#L1-L15) | read |
+| S1-R4 | header, form (text + select), 3 cards with own data | [index.html](https://github.com/Bote20/JobTracker/blob/aeb40072a618f654106921571830940ed8c10461/index.html#L1-L65) | open the page |
+| S1-R5 | finished card looks different | [style.css - .done](https://github.com/Bote20/JobTracker/blob/f6d07f6da15b3d01396dc11dd95b99a6824e09d0/style.css#L125-L127) | look at the card |
+| S1-R6 | 2 columns on desktop, 1 under 700px | [style.css - @media](https://github.com/Bote20/JobTracker/blob/f6d07f6da15b3d01396dc11dd95b99a6824e09d0/style.css#L148-L152) | resize < 700px |
+| S1-R7 | visible focus, readable dark theme | [style.css - focus/dark](https://github.com/Bote20/JobTracker/blob/f6d07f6da15b3d01396dc11dd95b99a6824e09d0/style.css#L136-L164) | Tab; dark mode |
+| S1-R8 | commit "Stage 1" pushed | [Commit "Stage 1"](https://github.com/Bote20/JobTracker/commit/e77bed37bc6344adb64890cade48cbcca339d593) | commit history |
