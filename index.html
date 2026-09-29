@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JobTracker - mockup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>JobTracker</h1>
+    <p>Gestionează-ți aplicațiile la joburi și urmărește stadiul lor.</p>
+    <p class="app-count">3 aplicații, dintre care 2 în așteptare</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Adaugă aplicație</h2>
+      <form class="item-form">
+        <label>Rol și Companie 
+          <input type="text" name="titlu" placeholder="Ex: Frontend Dev la UiPath" />
+        </label>
+        <label>Mod de lucru
+          <select name="eticheta">
+            <option value="remote">Remote</option>
+            <option value="hibrid">Hibrid</option>
+            <option value="birou">La birou</option>
+          </select>
+        </label>
+        <button type="submit">Adaugă</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Aplicațiile mele</h2>
+      <!-- Când lista e goală: <p class="empty">Nu există niciun element.</p> -->
+      <ul class="item-list">
+        <li class="item-card">
+          <div>
+            <h3>Frontend Dev la UiPath</h3>
+            <span class="badge badge-hibrid">Hibrid</span>
+          </div>
+          <span class="status">Aplicat</span>
+        </li>
+        <li class="item-card done">
+          <div>
+            <h3>Backend Dev la Bitdefender</h3>
+            <span class="badge badge-remote">Remote</span>
+          </div>
+          <span class="status">Intervievat</span>
+        </li>
+        <li class="item-card">
+          <div>
+            <h3>Fullstack Dev la Adobe</h3>
+            <span class="badge badge-birou">La birou</span>
+          </div>
+          <span class="status">Aplicat</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="app-footer">Proiect Tehnologii Web</footer>
+</body>
+</html>
