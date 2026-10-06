@@ -3,7 +3,7 @@
 - Gemini
 
 ## Conversations
-[Introdu aici link-ul către conversația noastră din browser] (Generare logică date JavaScript imutabile)
+[https://gemini.google.com/app/b800e4edd39f24b8?_gl=1*xx46cz*_gcl_au*MzM5MTIzMTcyLjE3NjQ5MzMyMDU.*_ga*ODM2MzE1NzYzLjE3NjQ5MzMzMTg.*_ga_WC57KJ50ZZ*czE3NjQ5MzMzMTckbzEkZzEkdDE3NjQ5MzM3ODAkajU2JGwwJGgw] (Generare logică date JavaScript imutabile)
 
 ## Key requests
 ### 1. Generare funcții JavaScript și adaptare temă

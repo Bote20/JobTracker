@@ -3,7 +3,7 @@
 - Gemini
 
 ## Conversations
-[Introdu aici link-ul conversației cu Gemini] (Generare mockup HTML/CSS și adaptare temă JobTracker)
+[https://gemini.google.com/app/b800e4edd39f24b8?_gl=1*xx46cz*_gcl_au*MzM5MTIzMTcyLjE3NjQ5MzMyMDU.*_ga*ODM2MzE1NzYzLjE3NjQ5MzMzMTg.*_ga_WC57KJ50ZZ*czE3NjQ5MzMzMTckbzEkZzEkdDE3NjQ5MzM3ODAkajU2JGwwJGgw] (Generare mockup HTML/CSS și adaptare temă JobTracker)
 
 ## Key requests
 ### 1. Generare fișiere cod

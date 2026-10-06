@@ -55,10 +55,10 @@ Plain JavaScript, no DOM. aplicatii.js holds the array and the functions that re
 
 | ID | Requirement | Where (permalink) | How to check |
 | --- | --- | --- | --- |
-| S2-R1 | JS file linked, logs on page load | [index.html](<link-aici>) | open page, F12 |
-| S2-R2 | 3+ items with id, name, state, tag | [aplicatii.js](<link-aici>) | read |
-| S2-R3 | list, count, search, add, toggle, delete | [aplicatii.js](<link-aici>) | console output |
-| S2-R4 | add rejects empty name and invalid tag | [aplicatii.js](<link-aici>) | last 2 console lines |
-| S2-R5 | original array unchanged after add | [aplicatii.js](<link-aici>) | console line |
-| S2-R6 | README Stage 2 section + AI log | [README.md / ai-log](<link-aici>) | read |
-| S2-R7 | commit "Stage 2" pushed | [Commit "Stage 2"](<link-aici>) | commit history |
+| S2-R1 | JS file linked, logs on page load | [index.html](https://github.com/Bote20/JobTracker/blob/a4a68a4adb53e4c07756c85c6fe2c4cc20f0f226/index.html#L65) | open page, F12 |
+| S2-R2 | 3+ items with id, name, state, tag | [aplicatii.js](https://github.com/Bote20/JobTracker/blob/a4a68a4adb53e4c07756c85c6fe2c4cc20f0f226/aplicatii.js#L2-L6) | read |
+| S2-R3 | list, count, search, add, toggle, delete | [aplicatii.js](https://github.com/Bote20/JobTracker/blob/a4a68a4adb53e4c07756c85c6fe2c4cc20f0f226/aplicatii.js#L11-L62) | console output |
+| S2-R4 | add rejects empty name and invalid tag | [aplicatii.js](https://github.com/Bote20/JobTracker/blob/a4a68a4adb53e4c07756c85c6fe2c4cc20f0f226/aplicatii.js#L83-L84) | last 2 console lines |
+| S2-R5 | original array unchanged after add | [aplicatii.js](https://github.com/Bote20/JobTracker/blob/a4a68a4adb53e4c07756c85c6fe2c4cc20f0f226/aplicatii.js#L73) | console line |
+| S2-R6 | README Stage 2 section + AI log | [README.md / ai-log](https://github.com/Bote20/JobTracker/blob/a4a68a4adb53e4c07756c85c6fe2c4cc20f0f226/README.md?plain=1#L33-L34) | read |
+| S2-R7 | commit "Stage 2" pushed | [Commit "Stage 2"](https://github.com/Bote20/JobTracker/commit/a4a68a4adb53e4c07756c85c6fe2c4cc20f0f226) | commit history |
