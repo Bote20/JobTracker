@@ -21,17 +21,22 @@ Sample data used across all stages:
 
 | Tool | Used for |
 | --- | --- |
-| Gemini | Generare schelet HTML, CSS, adaptare layout și fișiere Markdown pentru tema JobTracker |
+| Gemini | Generare schelet HTML, CSS, adaptare layout, funcții JS imutabile și fișiere Markdown pentru tema JobTracker |
 
 Details per stage:
 Stage 1: Generare structură README, cod HTML semantic și CSS layout (Grid/Flexbox). Vezi folderul `ai-log/`.
+Stage 2: Generare funcții de manipulare a datelor (map, filter, reduce) și logica de validare imutabilă în JavaScript.
 
 ## How to run
 Open index.html in a browser. No build step, no server.
 
+## Stage 2: data logic
+Plain JavaScript, no DOM. aplicatii.js holds the array and the functions that read and change it. Results are printed in the browser console (F12).
+
 ## Status
 [x] Stage 1: static mockup
-[ ] Stage 2: data logic in JavaScript
+[x] Stage 2: data logic in JavaScript
+[ ] Stage 3: Vite and React project
 
 ## Stage 1 Checklist
 
@@ -45,3 +50,15 @@ Open index.html in a browser. No build step, no server.
 | S1-R6 | 2 columns on desktop, 1 under 700px | [style.css - @media](https://github.com/Bote20/JobTracker/blob/f6d07f6da15b3d01396dc11dd95b99a6824e09d0/style.css#L148-L152) | resize < 700px |
 | S1-R7 | visible focus, readable dark theme | [style.css - focus/dark](https://github.com/Bote20/JobTracker/blob/f6d07f6da15b3d01396dc11dd95b99a6824e09d0/style.css#L136-L164) | Tab; dark mode |
 | S1-R8 | commit "Stage 1" pushed | [Commit "Stage 1"](https://github.com/Bote20/JobTracker/commit/e77bed37bc6344adb64890cade48cbcca339d593) | commit history |
+
+## Stage 2 Checklist
+
+| ID | Requirement | Where (permalink) | How to check |
+| --- | --- | --- | --- |
+| S2-R1 | JS file linked, logs on page load | [index.html](<link-aici>) | open page, F12 |
+| S2-R2 | 3+ items with id, name, state, tag | [aplicatii.js](<link-aici>) | read |
+| S2-R3 | list, count, search, add, toggle, delete | [aplicatii.js](<link-aici>) | console output |
+| S2-R4 | add rejects empty name and invalid tag | [aplicatii.js](<link-aici>) | last 2 console lines |
+| S2-R5 | original array unchanged after add | [aplicatii.js](<link-aici>) | console line |
+| S2-R6 | README Stage 2 section + AI log | [README.md / ai-log](<link-aici>) | read |
+| S2-R7 | commit "Stage 2" pushed | [Commit "Stage 2"](<link-aici>) | commit history |
