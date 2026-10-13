@@ -62,3 +62,13 @@ Plain JavaScript, no DOM. aplicatii.js holds the array and the functions that re
 | S2-R5 | original array unchanged after add | [aplicatii.js](https://github.com/Bote20/JobTracker/blob/a4a68a4adb53e4c07756c85c6fe2c4cc20f0f226/aplicatii.js#L73) | console line |
 | S2-R6 | README Stage 2 section + AI log | [README.md / ai-log](https://github.com/Bote20/JobTracker/blob/a4a68a4adb53e4c07756c85c6fe2c4cc20f0f226/README.md?plain=1#L33-L34) | read |
 | S2-R7 | commit "Stage 2" pushed | [Commit "Stage 2"](https://github.com/Bote20/JobTracker/commit/a4a68a4adb53e4c07756c85c6fe2c4cc20f0f226) | commit history |
+
+
+## Stage 3: Vite and React project
+The app now lives in frontend/, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
+
+## How to run
+cd frontend
+npm install
+npm run dev
+Then open the address printed in the terminal (http://localhost:5173).
