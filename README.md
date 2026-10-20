@@ -72,3 +72,27 @@ cd frontend
 npm install
 npm run dev
 Then open the address printed in the terminal (http://localhost:5173).
+
+
+## Stage 4: components
+The list is rendered from the data, through two components:
+- `AplicatieList` receives the whole array and renders one card per item.
+- `AplicatieCard` receives a single item through props and displays it.
+
+## Status
+- [x] Stage 1: Static HTML and CSS
+- [x] Stage 2: JavaScript
+- [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [ ] Stage 5: local state and events
+
+## Stage 4 Checklist
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S4-R1 | 2+ components in src/components/ | [frontend/src/components/](https://github.com/Bote20/JobTracker/tree/main/frontend/src/components) | open folder |
+| S4-R2 | card receives data through props | [AplicatieCard.jsx#L..-L..](https://github.com/Bote20/JobTracker/blob/9907c3f364a710e881db383698ebf14359658a5e/frontend/src/components/AplicatieCard.jsx#L4) | read |
+| S4-R3 | map + key={id}, no console warnings | [AplicatieList.jsx#L..-L..](https://github.com/Bote20/JobTracker/blob/9907c3f364a710e881db383698ebf14359658a5e/frontend/src/components/AplicatieList.jsx#L12-L14) | F12, Console |
+| S4-R4 | message for empty list | [AplicatieList.jsx#L..-L..](https://github.com/Bote20/JobTracker/blob/9907c3f364a710e881db383698ebf14359658a5e/frontend/src/components/AplicatieList.jsx#L6) | set array to [] |
+| S4-R5 | state changes the card look | [AplicatieCard.jsx#L..](https://github.com/Bote20/JobTracker/blob/9907c3f364a710e881db383698ebf14359658a5e/frontend/src/components/AplicatieCard.jsx#L6) | toggle a done flag |
+| S4-R6 | README Stage 4 section + AI log | [README.md](https://github.com/Bote20/JobTracker/blob/main/README.md), [ai-log/etapa-04.md](https://github.com/Bote20/JobTracker/blob/main/ai-log/etapa-04.md) | read |
+| S4-R7 | commit "Stage 4" pushed | [link to the commit](https://github.com/Bote20/JobTracker/commit/9907c3f364a710e881db383698ebf14359658a5e) | commit history |
