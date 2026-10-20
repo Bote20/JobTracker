@@ -18,9 +18,15 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  background: var(--bg);
   color: var(--text);
   line-height: 1.5;
+  /* Setările pentru imaginea de fundal pe tot ecranul */
+  background-color: var(--bg);
+  background-image: url('/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Menține imaginea fixă când dai scroll */
 }
 
 .app-header {
@@ -28,6 +34,8 @@ body {
   color: white;
   text-align: center;
   padding: 24px 16px;
+  /* Adăugăm un pic de umbră ca să se delimiteze frumos de imaginea de fundal */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .container {
@@ -41,10 +49,15 @@ body {
 }
 
 .panel {
-  background-color: var(--card);
+  /* Setările pentru transparență și blur (ceață) */
+  background-color: rgba(255, 255, 255, 0.85); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 24px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .item-form {
@@ -95,6 +108,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 14px 16px;
+  /* Modificăm puțin cardurile să arate bine pe fundalul semi-transparent */
+  background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid var(--border);
   border-radius: 10px;
   transition: border-color 0.2s, background-color 0.2s;
@@ -160,5 +175,13 @@ body {
     --muted: #9ca3af;
     --border: #352f4d;
     --accent-soft: #2a2342;
+  }
+  
+  .panel {
+    background-color: rgba(30, 27, 46, 0.85); /* Panou transparent întunecat */
+  }
+  
+  .item-card {
+    background-color: rgba(42, 35, 66, 0.6); /* Carduri mai închise */
   }
 }
