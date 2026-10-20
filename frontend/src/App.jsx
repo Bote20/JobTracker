@@ -1,3 +1,5 @@
+import AplicatieList from "./components/AplicatieList.jsx";
+
 const aplicatii = [
   { id: 1, titlu: "Frontend Developer la UiPath", intervievat: false, modLucru: "hibrid" },
   { id: 2, titlu: "Backend Developer la Bitdefender", intervievat: true, modLucru: "remote" },
@@ -19,8 +21,8 @@ export default function App() {
       <main className="container">
         <section className="panel">
           <h2>Aplicațiile mele</h2>
-          {/* Temporar: date brute; componentele apar in Etapa 4 */}
-          <pre>{JSON.stringify(aplicatii, null, 2)}</pre>
+          {/* Aici am inlocuit textul JSON cu componenta de lista */}
+          <AplicatieList aplicatii={aplicatii} />
         </section>
       </main>
     </>
