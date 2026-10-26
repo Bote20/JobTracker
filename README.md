@@ -96,3 +96,27 @@ The list is rendered from the data, through two components:
 | S4-R5 | state changes the card look | [AplicatieCard.jsx#L..](https://github.com/Bote20/JobTracker/blob/9907c3f364a710e881db383698ebf14359658a5e/frontend/src/components/AplicatieCard.jsx#L6) | toggle a done flag |
 | S4-R6 | README Stage 4 section + AI log | [README.md](https://github.com/Bote20/JobTracker/blob/main/README.md), [ai-log/etapa-04.md](https://github.com/Bote20/JobTracker/blob/main/ai-log/etapa-04.md) | read |
 | S4-R7 | commit "Stage 4" pushed | [link to the commit](https://github.com/Bote20/JobTracker/commit/9907c3f364a710e881db383698ebf14359658a5e) | commit history |
+
+
+## Stage 5: local state and events
+The list lives in React state. Checking and deleting work from the page, and the counters in the header follow automatically. A button in the header switches between light and dark mode. Changes are lost on refresh, which is what stage 6 and stage 10 fix.
+
+## Status
+- [x] Stage 1: Static HTML and CSS
+- [x] Stage 2: JavaScript
+- [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [x] Stage 5: local state and events
+- [ ] Stage 6: loading data from a mock API
+
+## Stage 5 Checklist
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S5-R1 | list kept in useState, in App | [App.jsx#L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/App.jsx#L16) | read |
+| S5-R2 | toggling changes state and card look | [App.jsx#L..-L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/App.jsx#L20-L24), [AplicatieCard.jsx#L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/components/AplicatieCard.jsx#L5) | click a checkbox |
+| S5-R3 | delete removes the item | [App.jsx#L..-L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/App.jsx#L27-L29), [AplicatieCard.jsx#L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/components/AplicatieCard.jsx#L21) | click Delete |
+| S5-R4 | header counter derived, not in state | [App.jsx#L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/App.jsx#L39) | toggle, watch header |
+| S5-R5 | immutable updates (no push, splice, assignment) | [App.jsx#L..-L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/App.jsx#L20-L29) | read |
+| S5-R6 | light/dark toggle: state + data-theme on html | [App.jsx#L..-L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/App.jsx#L32-L36), [App.css#L..-L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/App.css#L161-L162) | click the button, both system themes |
+| S5-R7 | no console warnings; README + AI log | [README.md](https://github.com/Bote20/JobTracker/blob/main/README.md), [ai-log/etapa-05.md](https://github.com/Bote20/JobTracker/blob/main/ai-log/etapa-05.md) | F12, Console |
+| S5-R8 | commit "Stage 5" pushed | [link to the commit](https://github.com/Bote20/JobTracker/commit/23b64de0ddca912e2208559298154fcf0045005d) | commit history |
