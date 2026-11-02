@@ -120,3 +120,29 @@ The list lives in React state. Checking and deleting work from the page, and the
 | S5-R6 | light/dark toggle: state + data-theme on html | [App.jsx#L..-L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/App.jsx#L32-L36), [App.css#L..-L..](https://github.com/Bote20/JobTracker/blob/23b64de0ddca912e2208559298154fcf0045005d/frontend/src/App.css#L161-L162) | click the button, both system themes |
 | S5-R7 | no console warnings; README + AI log | [README.md](https://github.com/Bote20/JobTracker/blob/main/README.md), [ai-log/etapa-05.md](https://github.com/Bote20/JobTracker/blob/main/ai-log/etapa-05.md) | F12, Console |
 | S5-R8 | commit "Stage 5" pushed | [link to the commit](https://github.com/Bote20/JobTracker/commit/23b64de0ddca912e2208559298154fcf0045005d) | commit history |
+
+
+## Stage 6: data from a mock API
+The list is served by json-server from db.json. The app fetches it on load and shows a loading state and an error state.
+npm run api # terminal 1, http://localhost:3001
+npm run dev # terminal 2, http://localhost:5173
+
+## Status
+- [x] Stage 1: Static HTML and CSS
+- [x] Stage 2: JavaScript
+- [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [x] Stage 5: local state and events
+- [x] Stage 6: data from a mock API
+- [ ] Stage 7: form and validation
+
+## Stage 6 Checklist
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S6-R1 | npm run api starts, route shows JSON | [package.json#L..](link), [db.json](link) | open localhost:3001/aplicatii |
+| S6-R2 | data no longer in React code | [App.jsx#L..](link) | read |
+| S6-R3 | loading message while waiting | [App.jsx#L..](link), [App.jsx#L..](link) | --delay 4000 |
+| S6-R4 | error message when API is down | [App.jsx#L..](link) | stop npm run api, refresh |
+| S6-R5 | fetch only in api.js, URL from env | [api.js#L..](link), [.env.example](link) | search for fetch |
+| S6-R6 | README Stage 6 section + AI log | [README.md](link), [ai-log/etapa-06.md](link) | read |
+| S6-R7 | commit "Stage 6" pushed | [link to the commit](link) | commit history |
