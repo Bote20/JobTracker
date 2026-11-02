@@ -139,10 +139,10 @@ npm run dev # terminal 2, http://localhost:5173
 ## Stage 6 Checklist
 | ID | Requirement | Where (permalink) | How to check |
 |---|---|---|---|
-| S6-R1 | npm run api starts, route shows JSON | [package.json#L..](link), [db.json](link) | open localhost:3001/aplicatii |
-| S6-R2 | data no longer in React code | [App.jsx#L..](link) | read |
-| S6-R3 | loading message while waiting | [App.jsx#L..](link), [App.jsx#L..](link) | --delay 4000 |
-| S6-R4 | error message when API is down | [App.jsx#L..](link) | stop npm run api, refresh |
-| S6-R5 | fetch only in api.js, URL from env | [api.js#L..](link), [.env.example](link) | search for fetch |
-| S6-R6 | README Stage 6 section + AI log | [README.md](link), [ai-log/etapa-06.md](link) | read |
-| S6-R7 | commit "Stage 6" pushed | [link to the commit](link) | commit history |
+| S6-R1 | npm run api starts, route shows JSON | [package.json#L..](https://github.com/Bote20/JobTracker/blob/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392/frontend/package.json#L11), [db.json](https://github.com/Bote20/JobTracker/blob/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392/frontend/db.json) | open localhost:3001/aplicatii |
+| S6-R2 | data no longer in React code | [App.jsx#L..](https://github.com/Bote20/JobTracker/blob/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392/frontend/src/App.jsx#L10) | read |
+| S6-R3 | loading message while waiting | [App.jsx#L..](https://github.com/Bote20/JobTracker/blob/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392/frontend/src/App.jsx#L11), [App.jsx#L..](https://github.com/Bote20/JobTracker/blob/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392/frontend/src/App.jsx#L67) | --delay 4000 |
+| S6-R4 | error message when API is down | [App.jsx#L..](https://github.com/Bote20/JobTracker/blob/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392/frontend/src/App.jsx#L69-L73) | stop npm run api, refresh |
+| S6-R5 | fetch only in api.js, URL from env | [api.js#L..](https://github.com/Bote20/JobTracker/blob/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392/frontend/src/api.js#L4), [.env.example](https://github.com/Bote20/JobTracker/blob/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392/frontend/.env.example) | search for fetch |
+| S6-R6 | README Stage 6 section + AI log | [README.md](https://github.com/Bote20/JobTracker/blob/main/README.md), [ai-log/etapa-06.md](https://github.com/Bote20/JobTracker/tree/main/frontend/src) | read |
+| S6-R7 | commit "Stage 6" pushed | [link to the commit](https://github.com/Bote20/JobTracker/commit/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392) | commit history |
