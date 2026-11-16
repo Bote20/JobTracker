@@ -22,6 +22,7 @@ Sample data used across all stages:
 | Tool | Used for |
 | --- | --- |
 | Gemini | Generare schelet HTML, CSS, adaptare layout, funcții JS imutabile și fișiere Markdown pentru tema JobTracker |
+| Claude | Stage 7: adaptarea formularului, a cererilor POST/PATCH/DELETE și a atributelor data-testid la tema JobTracker |
 
 Details per stage:
 Stage 1: Generare structură README, cod HTML semantic și CSS layout (Grid/Flexbox). Vezi folderul `ai-log/`.
@@ -146,3 +147,25 @@ npm run dev # terminal 2, http://localhost:5173
 | S6-R5 | fetch only in api.js, URL from env | [api.js#L..](https://github.com/Bote20/JobTracker/blob/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392/frontend/src/api.js#L4), [.env.example](https://github.com/Bote20/JobTracker/blob/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392/frontend/.env.example) | search for fetch |
 | S6-R6 | README Stage 6 section + AI log | [README.md](https://github.com/Bote20/JobTracker/blob/main/README.md), [ai-log/etapa-06.md](https://github.com/Bote20/JobTracker/tree/main/frontend/src) | read |
 | S6-R7 | commit "Stage 6" pushed | [link to the commit](https://github.com/Bote20/JobTracker/commit/51d5cea91b7fd5a1fc032f43a34b16fbc9efb392) | commit history |
+
+
+## Stage 7: form and validation
+Job applications can be added from the page. The form is controlled and validated,
+and every change (add, toggle, delete) goes to the API before it shows up
+in the list.
+- `AplicatieForm` has two controlled fields: *Rol & Companie* (`titlu`) and *Mod de lucru* (`modLucru`).
+- Validation: the title is required and must have between 3 and 100 characters. Errors appear next to the form, not in an `alert`.
+- `api.js` has one shared `request` function and `fetchAplicatii`, `createAplicatie`, `updateAplicatie`, `deleteAplicatie` (GET, POST, PATCH, DELETE on `/aplicatii`).
+- The list is updated with the object returned by the server (the id comes from json-server).
+- The submit button is disabled while saving; the form is cleared only if the save succeeded.
+- `tw.json` (repository root) and the `data-testid` attributes are used for automated checking.
+
+## Status
+- [x] Stage 1: Static HTML and CSS
+- [x] Stage 2: JavaScript
+- [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [x] Stage 5: local state and events
+- [x] Stage 6: data from a mock API
+- [x] Stage 7: form and validation
+- [ ] Stage 8: routing and detail page
