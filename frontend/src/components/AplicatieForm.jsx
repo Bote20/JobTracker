@@ -1,11 +1,7 @@
 import { useState } from "react";
+import { MODURI_LUCRU } from "../constants.js";
+import styles from "./AplicatieForm.module.css";
 
-// Câmpurile și valorile fixe ale temei JobTracker
-const MODURI_LUCRU = [
-  { value: "hibrid", label: "Hibrid" },
-  { value: "remote", label: "Remote" },
-  { value: "birou", label: "La birou" },
-];
 const TITLU_MIN = 3;
 const TITLU_MAX = 100;
 
@@ -46,7 +42,7 @@ export default function AplicatieForm({ onAdd }) {
   }
 
   return (
-    <form className="item-form" onSubmit={handleSubmit} noValidate data-testid="form">
+    <form className={styles.form} onSubmit={handleSubmit} noValidate data-testid="form">
       <label>
         Rol & Companie
         <input
@@ -78,7 +74,7 @@ export default function AplicatieForm({ onAdd }) {
           {eroare}
         </p>
       )}
-      <button type="submit" disabled={trimite} data-testid="form-submit">
+      <button type="submit" className="btn" disabled={trimite} data-testid="form-submit">
         {trimite ? "Se salvează..." : "Adaugă aplicația"}
       </button>
     </form>

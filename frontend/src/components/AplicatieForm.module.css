@@ -1,0 +1,11 @@
+.form { display: flex; flex-direction: column; gap: 16px; }
+.form label { display: flex; flex-direction: column; gap: 4px; font-weight: 500; }
+.form input,
+.form select {
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font: inherit;
+}
+.form input[aria-invalid="true"] { border-color: var(--danger); }
+.form :global(.error) { margin: 0; }

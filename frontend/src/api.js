@@ -18,6 +18,10 @@ export function fetchAplicatii() {
   return request("/aplicatii");
 }
 
+export function fetchAplicatie(id) {
+  return request(`/aplicatii/${id}`);
+}
+
 export function createAplicatie(aplicatie) {
   return request("/aplicatii", { method: "POST", body: JSON.stringify(aplicatie) });
 }

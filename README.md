@@ -22,7 +22,7 @@ Sample data used across all stages:
 | Tool | Used for |
 | --- | --- |
 | Gemini | Generare schelet HTML, CSS, adaptare layout, funcții JS imutabile și fișiere Markdown pentru tema JobTracker |
-| Claude | Stage 7: adaptarea formularului, a cererilor POST/PATCH/DELETE și a atributelor data-testid la tema JobTracker |
+| Claude | Stage 7: adaptarea formularului, a cererilor POST/PATCH/DELETE și a atributelor data-testid la tema JobTracker; Stage 8: rutare cu React Router, pagina de detaliu și mutarea stilurilor în CSS Modules |
 
 Details per stage:
 Stage 1: Generare structură README, cod HTML semantic și CSS layout (Grid/Flexbox). Vezi folderul `ai-log/`.
@@ -181,3 +181,25 @@ in the list.
 | S7-R6 | tw.json and the data-testid attributes from table 7.3 | [tw.json](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/tw.json), [AplicatieCard.jsx#L7-L28](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/components/AplicatieCard.jsx#L7-L28), [AplicatieForm.jsx#L49-L81](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/components/AplicatieForm.jsx#L49-L81) | querySelectorAll in the console |
 | S7-R7 | README Stage 7 section + AI log | [README.md#L152-L171](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/README.md?plain=1#L152-L171), [ai-log/etapa-07.md](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/ai-log/etapa-07.md) | read |
 | S7-R8 | commit "Stage 7" pushed | [link to the commit](https://github.com/Bote20/JobTracker/commit/16fcccafc4d94b093b52838800d054c29603a9bd) | commit history |
+
+
+## Stage 8: routing and detail page
+Three pages behind React Router: the list, a detail page at `/aplicatii/:id`,
+and an about page, plus a 404 page. Component styles moved to CSS Modules.
+- `Layout` holds the header (navigation with `NavLink`, theme toggle), the `<Outlet />` and the footer, written once for all pages.
+- `/` shows the form and the list (`AplicatiiPage`); the title of each card is a `Link` to `/aplicatii/:id`.
+- `AplicatieDetaliuPage` reads the id with `useParams` and asks the server for that item (`fetchAplicatie`); a missing id shows an error message and a way back.
+- `/despre` describes the app; any other address shows the app's 404 page.
+- Each component and page has its own `.module.css`; `index.css` keeps only the color variables (light/dark) and the shared classes (`panel`, `btn`, `error`, `badge`).
+- Fixed values and their labels live in `src/constants.js`.
+
+## Status
+- [x] Stage 1: Static HTML and CSS
+- [x] Stage 2: JavaScript
+- [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [x] Stage 5: local state and events
+- [x] Stage 6: data from a mock API
+- [x] Stage 7: form and validation
+- [x] Stage 8: routing and detail page
+- [ ] Stage 9: own backend with Express

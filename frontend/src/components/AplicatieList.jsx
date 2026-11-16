@@ -1,4 +1,5 @@
 import AplicatieCard from "./AplicatieCard.jsx";
+import styles from "./AplicatieList.module.css";
 
 export default function AplicatieList({ aplicatii, onToggle, onDelete }) {
   if (aplicatii.length === 0) {
@@ -10,7 +11,7 @@ export default function AplicatieList({ aplicatii, onToggle, onDelete }) {
   }
 
   return (
-    <ul className="item-list">
+    <ul className={styles.list}>
       {aplicatii.map((aplicatie) => (
         <AplicatieCard
           key={aplicatie.id}
