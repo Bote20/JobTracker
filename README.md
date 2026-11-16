@@ -169,3 +169,15 @@ in the list.
 - [x] Stage 6: data from a mock API
 - [x] Stage 7: form and validation
 - [ ] Stage 8: routing and detail page
+
+## Stage 7 Checklist
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S7-R1 | controlled form: value + onChange on every field | [AplicatieForm.jsx#L14-L17](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/components/AplicatieForm.jsx#L14-L17), [AplicatieForm.jsx#L54-L66](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/components/AplicatieForm.jsx#L54-L66) | read |
+| S7-R2 | empty title shows an error, nothing is sent | [AplicatieForm.jsx#L19-L34 (valideaza)](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/components/AplicatieForm.jsx#L19-L34) | submit empty, watch Network |
+| S7-R3 | added item shows in the list and survives refresh | [App.jsx#L44-L47 (handleAdd)](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/App.jsx#L44-L47), [api.js#L21-L23](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/api.js#L21-L23) | add, refresh |
+| S7-R4 | toggle and delete survive refresh | [App.jsx#L49-L66](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/App.jsx#L49-L66), [api.js#L25-L34](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/api.js#L25-L34) | toggle/delete, refresh |
+| S7-R5 | button disabled while sending, form cleared only on success | [AplicatieForm.jsx#L35-L45](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/components/AplicatieForm.jsx#L35-L45), [AplicatieForm.jsx#L81](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/components/AplicatieForm.jsx#L81) | --delay 3000; stop API and submit |
+| S7-R6 | tw.json and the data-testid attributes from table 7.3 | [tw.json](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/tw.json), [AplicatieCard.jsx#L7-L28](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/components/AplicatieCard.jsx#L7-L28), [AplicatieForm.jsx#L49-L81](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/frontend/src/components/AplicatieForm.jsx#L49-L81) | querySelectorAll in the console |
+| S7-R7 | README Stage 7 section + AI log | [README.md#L152-L171](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/README.md?plain=1#L152-L171), [ai-log/etapa-07.md](https://github.com/Bote20/JobTracker/blob/16fcccafc4d94b093b52838800d054c29603a9bd/ai-log/etapa-07.md) | read |
+| S7-R8 | commit "Stage 7" pushed | [link to the commit](https://github.com/Bote20/JobTracker/commit/16fcccafc4d94b093b52838800d054c29603a9bd) | commit history |
