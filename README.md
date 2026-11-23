@@ -250,3 +250,14 @@ Quick test of the API:
 - [x] Stage 8: routing and detail page
 - [x] Stage 9: own backend with Express
 - [ ] Stage 10: MariaDB and full CRUD
+
+## Stage 9 Checklist
+| ID | Requirement | Where (permalink) | How to check |
+|---|---|---|---|
+| S9-R1 | npm run dev in backend/ starts the API on 3001 | [backend/package.json#L5-L10](https://github.com/Bote20/JobTracker/blob/b5444602c6b603062621acc05c401e9e4c879a29/backend/package.json#L5-L10), [server.js#L3-L7](https://github.com/Bote20/JobTracker/blob/b5444602c6b603062621acc05c401e9e4c879a29/backend/src/server.js#L3-L7) | run it, open /health |
+| S9-R2 | all five routes answer with the right codes | [routes/aplicatii.js#L16-L71](https://github.com/Bote20/JobTracker/blob/b5444602c6b603062621acc05c401e9e4c879a29/backend/src/routes/aplicatii.js#L16-L71) | curl commands from README |
+| S9-R3 | invalid data returns 400 with a clear message | [validation.js#L1-L50](https://github.com/Bote20/JobTracker/blob/b5444602c6b603062621acc05c401e9e4c879a29/backend/src/validation.js#L1-L50), [routes/aplicatii.js#L43-L51](https://github.com/Bote20/JobTracker/blob/b5444602c6b603062621acc05c401e9e4c879a29/backend/src/routes/aplicatii.js#L43-L51) | POST with empty title |
+| S9-R4 | React app works with json-server removed | [frontend/package.json](https://github.com/Bote20/JobTracker/blob/b5444602c6b603062621acc05c401e9e4c879a29/frontend/package.json), [api.js#L10-L14](https://github.com/Bote20/JobTracker/blob/b5444602c6b603062621acc05c401e9e4c879a29/frontend/src/api.js#L10-L14) | stop everything but backend |
+| S9-R5 | no CORS errors in the browser console | [app.js#L7-L9 (cors)](https://github.com/Bote20/JobTracker/blob/b5444602c6b603062621acc05c401e9e4c879a29/backend/src/app.js#L7-L9) | open console |
+| S9-R6 | README Stage 9 section + AI log | [README.md#L220-L252](https://github.com/Bote20/JobTracker/blob/b5444602c6b603062621acc05c401e9e4c879a29/README.md?plain=1#L220-L252), [ai-log/etapa-09.md](https://github.com/Bote20/JobTracker/blob/b5444602c6b603062621acc05c401e9e4c879a29/ai-log/etapa-09.md) | read |
+| S9-R7 | commit "Stage 9" pushed | [link to the commit](https://github.com/Bote20/JobTracker/commit/b5444602c6b603062621acc05c401e9e4c879a29) | commit history |
