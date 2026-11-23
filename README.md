@@ -22,7 +22,7 @@ Sample data used across all stages:
 | Tool | Used for |
 | --- | --- |
 | Gemini | Generare schelet HTML, CSS, adaptare layout, funcții JS imutabile și fișiere Markdown pentru tema JobTracker |
-| Claude | Stage 7: adaptarea formularului, a cererilor POST/PATCH/DELETE și a atributelor data-testid la tema JobTracker; Stage 8: rutare cu React Router, pagina de detaliu și mutarea stilurilor în CSS Modules |
+| Claude | Stage 7: adaptarea formularului, a cererilor POST/PATCH/DELETE și a atributelor data-testid la tema JobTracker; Stage 8: rutare cu React Router, pagina de detaliu și mutarea stilurilor în CSS Modules; Stage 9: serverul Express (rute REST, validare, CORS) adaptat la resursa aplicatii |
 
 Details per stage:
 Stage 1: Generare structură README, cod HTML semantic și CSS layout (Grid/Flexbox). Vezi folderul `ai-log/`.
@@ -215,3 +215,38 @@ and an about page, plus a 404 page. Component styles moved to CSS Modules.
 | S8-R6 | data-testid attributes from tables 7.3 and 8.2; detail route /&lt;resource&gt;/:id | [Layout.jsx#L29](https://github.com/Bote20/JobTracker/blob/343889bff8782828570e5e9d0c0574565ce57316/frontend/src/components/Layout.jsx#L29), [AplicatieCard.jsx#L9-L37](https://github.com/Bote20/JobTracker/blob/343889bff8782828570e5e9d0c0574565ce57316/frontend/src/components/AplicatieCard.jsx#L9-L37), [AplicatieDetaliuPage.jsx#L38-L62](https://github.com/Bote20/JobTracker/blob/343889bff8782828570e5e9d0c0574565ce57316/frontend/src/pages/AplicatieDetaliuPage.jsx#L38-L62), [NotFoundPage.jsx#L5](https://github.com/Bote20/JobTracker/blob/343889bff8782828570e5e9d0c0574565ce57316/frontend/src/pages/NotFoundPage.jsx#L5), [App.jsx#L15](https://github.com/Bote20/JobTracker/blob/343889bff8782828570e5e9d0c0574565ce57316/frontend/src/App.jsx#L15) | querySelector in the console |
 | S8-R7 | README Stage 8 section + AI log | [README.md#L186-L205](https://github.com/Bote20/JobTracker/blob/343889bff8782828570e5e9d0c0574565ce57316/README.md?plain=1#L186-L205), [ai-log/etapa-08.md](https://github.com/Bote20/JobTracker/blob/343889bff8782828570e5e9d0c0574565ce57316/ai-log/etapa-08.md) | read |
 | S8-R8 | commit "Stage 8" pushed | [link to the commit](https://github.com/Bote20/JobTracker/commit/343889bff8782828570e5e9d0c0574565ce57316) | commit history |
+
+
+## Stage 9: own backend
+json-server is gone. The API is an Express server in `backend/`, with REST
+routes, server side validation and CORS. Data is still kept in memory and
+resets on restart.
+- `backend/src/routes/aplicatii.js`: GET, POST, PATCH, DELETE on `/aplicatii` and `/aplicatii/:id`, with 200, 201, 204, 400 and 404 codes.
+- `backend/src/validation.js`: `titlu` is required (3 to 100 characters), `modLucru` must be one of `hibrid`, `remote`, `birou` (the same values as `frontend/src/constants.js`), `intervievat` must be a boolean. Only these fields are kept; anything else sent by the client is ignored.
+- `backend/src/app.js`: `cors()`, `express.json()`, the `/health` route, a 404 for unknown routes and a central error handler. Errors always have the form `{ "error": "..." }`.
+- `backend/src/server.js` only starts the app on `PORT` (3001 by default); `.env.example` documents `PORT` and `CORS_ORIGIN`.
+- In `frontend/`, `api.js` now shows the error message sent by the server; `db.json` and json-server were removed.
+
+## How to run
+    cd backend && npm install && npm run dev    # terminal 1, port 3001
+    cd frontend && npm install && npm run dev   # terminal 2, port 5173
+
+Quick test of the API:
+
+    curl -s -w '  -> %{http_code}\n' http://localhost:3001/aplicatii
+    curl -s -w '  -> %{http_code}\n' -X POST http://localhost:3001/aplicatii -H "Content-Type: application/json" -d '{"titlu":"Din curl","modLucru":"remote"}'
+    curl -s -w '  -> %{http_code}\n' -X POST http://localhost:3001/aplicatii -H "Content-Type: application/json" -d '{"titlu":""}'
+    curl -s -w '  -> %{http_code}\n' http://localhost:3001/aplicatii/999
+    curl -s -w '  -> %{http_code}\n' -X DELETE http://localhost:3001/aplicatii/6
+
+## Status
+- [x] Stage 1: Static HTML and CSS
+- [x] Stage 2: JavaScript
+- [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [x] Stage 5: local state and events
+- [x] Stage 6: data from a mock API
+- [x] Stage 7: form and validation
+- [x] Stage 8: routing and detail page
+- [x] Stage 9: own backend with Express
+- [ ] Stage 10: MariaDB and full CRUD

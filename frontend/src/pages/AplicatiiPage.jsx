@@ -23,7 +23,7 @@ export default function AplicatiiPage() {
         if (!ignore) setAplicatii(data);
       } catch (err) {
         if (!ignore) {
-          setError(`Nu am putut încărca datele: ${err.message}. Rulează npm run api?`);
+          setError(`Nu am putut încărca datele: ${err.message}. Rulează npm run dev în backend?`);
         }
       } finally {
         if (!ignore) setLoading(false);
